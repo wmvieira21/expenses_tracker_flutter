@@ -28,15 +28,57 @@ class _ExpensesState extends State<Expenses> {
     )
   ];
 
+  void _addExpenseList(Expense exp) {
+    setState(() {
+      _expensesList.add(exp);
+    });
+  }
+
+  void _removeExpense(Expense exp) {
+    final int indexExpense = _expensesList.indexOf(exp);
+
+    setState(() {
+      _expensesList.remove(exp);
+    });
+
+    _undoExpenseRemoval(indexExpense, exp);
+  }
+
+  void _undoExpenseRemoval(int indexExpense, Expense exp) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: const Duration(seconds: 4),
+        content: const Text('Expense deleted!'),
+        action: SnackBarAction(
+            label: 'Undo',
+            onPressed: () {
+              setState(() {
+                _expensesList.insert(indexExpense, exp);
+              });
+            }),
+      ),
+    );
+  }
+
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled: true,
       context: context,
-      builder: (ctx) => const NewExpense(),
+      builder: (ctx) => NewExpense(onSaveNewExpenseList: _addExpenseList),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    Widget mainContent =
+        const Center(child: Text('No expenses found yet. Start adding now!'));
+
+    if (_expensesList.isNotEmpty) {
+      mainContent = ExpensesList(
+          expenses: _expensesList, onRemoveExpense: _removeExpense);
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Expense Tracker'),
@@ -51,9 +93,7 @@ class _ExpensesState extends State<Expenses> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text('The chart'),
-          Expanded(
-            child: ExpensesList(expenses: _expensesList),
-          ),
+          Expanded(child: mainContent),
         ],
       ),
     );
