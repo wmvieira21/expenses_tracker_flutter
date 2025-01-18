@@ -14,7 +14,7 @@ void main() {
         colorScheme: kColorsSchemeDark,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: kColorsSchemeDark.primaryContainer,
+              backgroundColor: kColorsSchemeDark.onPrimaryContainer,
               foregroundColor: kColorsScheme.onPrimaryContainer),
         ),
       ),
