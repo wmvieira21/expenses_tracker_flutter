@@ -16,7 +16,7 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _expensesList = [
     Expense(
-      tittle: 'Ensurance',
+      tittle: 'Insurance',
       amount: 12.6,
       category: Category.food,
       date: DateTime.now(),
