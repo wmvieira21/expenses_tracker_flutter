@@ -1,16 +1,16 @@
-# expenses_tracker
+# Expense tracker
 
-A new Flutter project.
+# About
+Developed an Expense tracker app using Flutter. It features a home screen where users can see their monthly expenses and a chart displaying which category (work, food, leisure, and travel) the user has been spending more money on. Furthermore, users can delete their expenses by swiping them to the left. Additionally, users can add new expenses by clicking on the (+) button in the app bar. This screen allows you to add a title, amount, and date for your new expense.
 
-## Getting Started
+### Technologies
+- Flutter
+- Dart
 
-This project is a starting point for a Flutter application.
+## Light mode
+![expenses_light_mode](https://github.com/user-attachments/assets/a289d937-7eca-4c66-a700-3c24c1e7191d)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dark mode
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![expenses_dark_mode](https://github.com/user-attachments/assets/f6911761-6aeb-4d29-b246-9868788fbdef)
