@@ -1,16 +1,10 @@
-# expenses_tracker
+# Expenses tracker
 
-A new Flutter project.
 
-## Getting Started
+## Light mode
+![expenses_light_mode](https://github.com/user-attachments/assets/a289d937-7eca-4c66-a700-3c24c1e7191d)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Dark mode
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![expenses_dark_mode](https://github.com/user-attachments/assets/f6911761-6aeb-4d29-b246-9868788fbdef)
