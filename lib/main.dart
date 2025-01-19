@@ -11,13 +11,16 @@ void main() {
   runApp(
     MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
-        colorScheme: kColorsSchemeDark,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-              backgroundColor: kColorsSchemeDark.onPrimaryContainer,
-              foregroundColor: kColorsScheme.onPrimaryContainer),
-        ),
-      ),
+          colorScheme: kColorsSchemeDark,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: kColorsSchemeDark.onPrimaryContainer,
+                foregroundColor: kColorsSchemeDark.onPrimary),
+          ),
+          cardTheme: CardTheme().copyWith(
+            color: kColorsSchemeDark.secondaryContainer,
+            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          )),
       theme: ThemeData().copyWith(
         colorScheme: kColorsScheme,
         appBarTheme: AppBarTheme().copyWith(
